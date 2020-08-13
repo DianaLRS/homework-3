@@ -99,12 +99,10 @@ console.log(passwordInput)
      
         function generatePassword(){
              // While the length of the password is withing the parameters, the password with generate the user input length. 
-    if (passLengthEl >= 8 && passLengthEl <= 128){
-        var passwordlength = passLengthEl
-        console.log(passwordlength)   
-        for ( var i = 0; i <= passwordlength; i++ ) {
-          
-           var result = passwordInput.charAt(Math.floor(Math.random() * passwordlength));
+    if (passLengthEl >= 8 && passLengthEl <= 128){  
+        var result = ""
+        for ( var i = 0; i < passLengthEl; i++ ) {
+           result += passwordInput.charAt(Math.floor(Math.random() * passwordInput.length));
            console.log(result)
         }
         return (result);
